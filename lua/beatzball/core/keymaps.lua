@@ -2,6 +2,7 @@
 vim.g.mapleader = ","
 
 local map = vim.api.nvim_set_keymap
+local keymap = vim.keymap
 
 ---------------------
 -- General Keymaps
@@ -35,6 +36,7 @@ map("n", "<leader>z", ":MaximizerToggle<CR>", { noremap = true, silent = false, 
 -- nvim-tree
 map("n", "<leader>ex", ":NvimTreeToggle<CR>", { noremap = true, silent = false, desc = "File Explorer Toggle" }) -- toggle file explorer
 map("n", "<leader>eo", ":NvimTreeFocus<CR>", { noremap = true, silent = false, desc = "File Explorer Focus" }) -- focus file explorer
+map("n", "<leader>ef", ":NvimTreeFindFile<CR>", { noremap = true, silent = false, desc = "File Explorer File Focus" }) -- focus file explorer
 
 -- telescope
 map("n", "<leader>p", "<cmd>Telescope find_files<cr>", { noremap = true, silent = false, desc = "Find Files" }) -- find files within current working directory, respects .gitignore

@@ -47,20 +47,20 @@ return packer.startup(function(use)
 		end,
 	})
 
-	---- DEFAULT colorscheme
-	use({
-		"EdenEast/nightfox.nvim",
-		as = "nightfox",
-		config = function()
-			require("nightfox").setup({
-				options = {
-					styles = { comments = "italic" },
-				},
-			})
-			-- vim.cmd("colorscheme nightfox")
-		end,
-	})
+	-- use({
+	-- 	"EdenEast/nightfox.nvim",
+	-- 	as = "nightfox",
+	-- 	config = function()
+	-- 		require("nightfox").setup({
+	-- 			options = {
+	-- 				styles = { comments = "italic" },
+	-- 			},
+	-- 		})
+	-- 		-- vim.cmd("colorscheme nightfox")
+	-- 	end,
+	-- })
 
+	---- DEFAULT colorscheme
 	use({
 		"wuelnerdotexe/vim-enfocado",
 		as = "enfocado",
@@ -129,7 +129,7 @@ return packer.startup(function(use)
 		"glepnir/lspsaga.nvim",
 		branch = "main",
 		config = function()
-			require("lspsaga").setup({})
+			-- require("lspsaga").setup({})
 		end,
 		requires = {
 			{ "nvim-tree/nvim-web-devicons" },
@@ -163,6 +163,16 @@ return packer.startup(function(use)
 
 	-- which-key
 	use("folke/which-key.nvim")
+
+	-- dashboard
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			-- require("alpha").setup(require("alpha.themes.theta").config)
+			require("alpha").setup(require("beatzball.core.alpha-theme").config)
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
