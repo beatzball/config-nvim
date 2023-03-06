@@ -43,44 +43,44 @@ map("n", "<leader>p", "<cmd>Telescope find_files<cr>", { noremap = true, silent 
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { noremap = true, silent = false, desc = "Find Files in CWD" }) -- find files within current working directory, respects .gitignore
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = false, desc = "Find String in CWD" }) -- find string in current working directory as you type
 map(
-	"n",
-	"<leader>fc",
-	"<cmd>Telescope grep_string<cr>",
-	{ noremap = true, silent = false, desc = "Find String Under Cursor in CWD" }
+  "n",
+  "<leader>fc",
+  "<cmd>Telescope grep_string<cr>",
+  { noremap = true, silent = false, desc = "Find String Under Cursor in CWD" }
 ) -- find string under cursor in current working directory
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { noremap = true, silent = false, desc = "List Open Buffers" }) -- list open buffers in current neovim instance
 map(
-	"n",
-	"<leader>fh",
-	"<cmd>Telescope help_tags<cr>",
-	{ noremap = true, silent = false, desc = "List Available Help Tags" }
+  "n",
+  "<leader>fh",
+  "<cmd>Telescope help_tags<cr>",
+  { noremap = true, silent = false, desc = "List Available Help Tags" }
 ) -- list available help tags
 map("n", "<leader>fx", ":nohl<CR>", { noremap = true, silent = false, desc = "Clear Search Highlights" }) -- clear search highlights
 
 -- telescope git commands (not on youtube nvim video)
 map(
-	"n",
-	"<leader>gc",
-	"<cmd>Telescope git_commits<cr>",
-	{ noremap = true, silent = false, desc = "Git Commits List All" }
+  "n",
+  "<leader>gc",
+  "<cmd>Telescope git_commits<cr>",
+  { noremap = true, silent = false, desc = "Git Commits List All" }
 ) -- list all git commits (use <cr> to checkout) ["gc" for git commits]
 map(
-	"n",
-	"<leader>gfc",
-	"<cmd>Telescope git_bcommits<cr>",
-	{ noremap = true, silent = false, desc = "Git Commits List for Current File" }
+  "n",
+  "<leader>gfc",
+  "<cmd>Telescope git_bcommits<cr>",
+  { noremap = true, silent = false, desc = "Git Commits List for Current File" }
 ) -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
 map(
-	"n",
-	"<leader>gb",
-	"<cmd>Telescope git_branches<cr>",
-	{ noremap = true, silent = false, desc = "Git Commits List Branches" }
+  "n",
+  "<leader>gb",
+  "<cmd>Telescope git_branches<cr>",
+  { noremap = true, silent = false, desc = "Git Commits List Branches" }
 ) -- list git branches (use <cr> to checkout) ["gb" for git branch]
 map(
-	"n",
-	"<leader>gs",
-	"<cmd>Telescope git_status<cr>",
-	{ noremap = true, silent = false, desc = "Git List Current Changes Per File w/ Diff Preview" }
+  "n",
+  "<leader>gs",
+  "<cmd>Telescope git_status<cr>",
+  { noremap = true, silent = false, desc = "Git List Current Changes Per File w/ Diff Preview" }
 ) -- list current changes per file with diff preview ["gs" for git status]
 
 -- restart lsp server (not on youtube nvim video)
