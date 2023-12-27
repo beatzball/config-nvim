@@ -1,1 +1,1 @@
-require("beatzball.init")
+require("setup")
