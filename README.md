@@ -2,27 +2,27 @@
 
 My custom .config/nvim.beatzball inspired by [LazyVim](https://github.com/LazyVim/LazyVim)
 
-Minimum Requirements:
-- >= neovim@0.9.0
+> Minimum Requirements:
+`>= neovim@0.9.0`
 
 ## Install
 
-The steps below help ensure that you do not need to override your config and instead run this config instance separately. 
-
-Feel free to just do `nvim.<whatever>` instead of `nvim.beatzball`, but it's on you to back up your config.
+> The steps below help ensure that you do not need to override your config and instead run this config instance separately. 
+> 
+> Feel free to just do `nvim.<whatever>` instead of `nvim.beatzball`, but it's on you to back up your config.
 
 ```shell
 cd ~/.config
 git clone git@github.com:beatzball/config-nvim.git nvim.beatzball
 ```
 
-The next line assumes you are using zshell, but feel free to change to your shell start up script as necessary. If you've changed `nvim.beatzball` above, make sure to also change it in the the next line.
+> The next line assumes you are using zshell, but feel free to change to your shell start up script as necessary. If you've changed `nvim.beatzball` above, make sure to also change it in the the next line.
 
 ```shell
 echo "alias nvbeatz=\"NVIM_APPNAME=nvim.beatzball nvim\"" >> .zshrc
 ```
 
-Now start up your neovim experience with
+> Now start up your neovim experience with
 ```shell
 nvbeatz
 ```
