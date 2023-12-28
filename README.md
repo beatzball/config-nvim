@@ -1,6 +1,6 @@
 # nvim.beatzball
 
-My custom .config/nvim.beatzball inspired by [LazyVim](https://github.com/LazyVim/LazyVim)
+My custom .config/nvim.beatzball inspired by [LazyVim](https://github.com/LazyVim/LazyVim) and [Typecraft](https://www.youtube.com/@typecraft_dev)
 
 > Minimum Requirements:
 `>= neovim@0.9.0`

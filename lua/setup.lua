@@ -40,5 +40,3 @@ vim.opt.rtp:prepend(lazypath)
 
 -- pluigns now come from lua/plugins
 require("lazy").setup("plugins")
-
-

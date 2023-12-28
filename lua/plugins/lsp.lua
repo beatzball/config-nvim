@@ -5,7 +5,7 @@ return {
     event = "VeryLazy",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -14,7 +14,24 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "tsserver" },
       })
-    end
+    end,
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    config = function()
+      local null_ls = require("null-ls")
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.diagnostics.eslint_d,
+          null_ls.builtins.formatting.prettier,
+        },
+      })
+      local wk = require("which-key")
+      wk.register({
+        ["<leader>b="] = { vim.lsp.buf.format, "Buffer Format File" },
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -39,7 +56,7 @@ return {
 
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
-          local wk = require('which-key')
+          local wk = require("which-key")
           wk.register({
             ["<leader>l"] = {
               name = "LSP",
@@ -53,9 +70,9 @@ return {
               c = { vim.lsp.buf.code_action, "LSP Code Action" },
               f = {
                 function()
-                  vim.lsp.buf.format { async = true }
+                  vim.lsp.buf.format({ async = true })
                 end,
-                "LSP Code Action"
+                "LSP Code Action",
               },
               ["<C-k>"] = { vim.lsp.buf.signature_help, "LSP Signature Help" },
               ["w"] = {
@@ -92,7 +109,6 @@ return {
           -- end, opts)
         end,
       })
-    end
+    end,
   },
-
 }

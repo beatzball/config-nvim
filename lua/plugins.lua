@@ -5,4 +5,3 @@ return {
   --
   -- this is just an area to test new plugins out w/o going the extra mile for creating a file
 }
-

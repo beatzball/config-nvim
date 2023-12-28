@@ -1,13 +1,13 @@
 return {
   {
-    'f-person/git-blame.nvim',
+    "f-person/git-blame.nvim",
     event = "VeryLazy",
     config = function()
-      require('gitblame').setup {
+      require("gitblame").setup({
         --Note how the `gitblame_` prefix is omitted in `setup`
         enabled = true,
-      }
-    end
+      })
+    end,
   },
   {
     "lewis6991/gitsigns.nvim",
@@ -27,7 +27,7 @@ return {
         current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>",
       })
     end,
-  }
+  },
   -- {
   --   "FabijanZulj/blame.nvim",
   --   config = function()

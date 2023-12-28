@@ -13,8 +13,8 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "duskfox"
-      local nightfox = require('nightfox')
+      vim.cmd.colorscheme("duskfox")
+      local nightfox = require("nightfox")
       nightfox.setup({
         -- palettes = {
         --   duskfox = {
@@ -22,6 +22,6 @@ return {
         --   }
         -- },
       })
-    end
+    end,
   },
 }
