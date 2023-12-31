@@ -35,16 +35,24 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+    },
     event = "VeryLazy",
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
       lspconfig.tsserver.setup({
+        capabilities = capabilities,
         on_attach = on_attach,
         root_dir = lspconfig.util.root_pattern("package.json"),
         single_file_support = false,
       })
       lspconfig.denols.setup({
+        capabilities = capabilities,
         on_attach = on_attach,
         root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
       })

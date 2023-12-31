@@ -1,34 +1,36 @@
+local logo = {
+  [[                                                                                     ]],
+  [[                                                                                     ]],
+  [[      MMMMMMMMMMMMMMMMMMMMM.           \     /            MMMMMMMMMMMMMMMMMMMMM      ]],
+  [[        MMMMMMMMMMMMMMMMMMMM           M\   /M           MMMMMMMMMMMMMMMMMMMM        ]],
+  [[          MMMMMMMMMMMMMMMMMMM          MMMMMMM          MMMMMMMMMMMMMMMMMMM          ]],
+  [[           MMMMMMMMMMMMMMMMMMM-_______MMMMMMMMM_______-MMMMMMMMMMMMMMMMMMM           ]],
+  [[            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM            ]],
+  [[            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM            ]],
+  [[            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM            ]],
+  [[            .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.          ]],
+  [[          .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.        ]],
+  [[                         MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                           ]],
+  [[                                MMMMMMMMMMMMMMMMMMM                                  ]],
+  [[                                    MMMMMMMMMMM                                      ]],
+  [[                                      MMMMMMM                                        ]],
+  [[                                       MMMMM                                         ]],
+  [[                                        MMM                                          ]],
+  [[                                         M                                           ]],
+  [[                                         |                                           ]],
+  [[                                                                                     ]],
+  [[                                                                                     ]],
+  [[                                 B E A T Z B A L L                                   ]],
+  [[                                    N E O V I M                                      ]],
+  [[                                                                                     ]],
+  [[                                                                                     ]],
+}
+
 return {
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
     opts = function()
-      local logo = [[
-
-
-      MMMMMMMMMMMMMMMMMMMMM.           \     /            MMMMMMMMMMMMMMMMMMMMM
-        MMMMMMMMMMMMMMMMMMMM           M\   /M           MMMMMMMMMMMMMMMMMMMM  
-          MMMMMMMMMMMMMMMMMMM          MMMMMMM          MMMMMMMMMMMMMMMMMMM    
-           MMMMMMMMMMMMMMMMMMM-_______MMMMMMMMM_______-MMMMMMMMMMMMMMMMMMM     
-            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM      
-            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM      
-            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM      
-            .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.    
-          .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.  
-                         MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                     
-                                MMMMMMMMMMMMMMMMMMM                            
-                                    MMMMMMMMMMM                                
-                                      MMMMMMM                                  
-                                       MMMMM                                   
-                                        MMM                                    
-                                         M                                     
-                                         |                                     
-
-
-                                 B E A T Z B A L L                             
-                                    N E O V I M                                
-      ]]
-
       local opts = {
         theme = "doom",
         hide = {
@@ -37,18 +39,18 @@ return {
           statusline = true,
         },
         config = {
-          header = vim.split(logo, "\n"),
+          header = logo,
           -- stylua: ignore
           center = {
             { action = "Telescope find_files", desc = " Find file", icon = " ", key = "f" },
             { action = "ene | startinsert", desc = " New file", icon = " ", key = "n" },
             { action = "Telescope oldfiles", desc = " Recent files", icon = " ", key = "r" },
             { action = "Telescope live_grep", desc = " Find text", icon = " ", key = "g" },
-            -- { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
-            { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
-            -- { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
             { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
             { action = "qa", desc = " Quit", icon = " ", key = "q" },
+            -- { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config", icon = " ", key = "c" },
+            -- { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
+            -- { action = "LazyExtras", desc = " Lazy Extras", icon = " ", key = "x" },
           },
           footer = function()
             local stats = require("lazy").stats()
@@ -80,3 +82,4 @@ return {
     end,
   },
 }
+
