@@ -1,7 +1,7 @@
 return {
   {
     "f-person/git-blame.nvim",
-    event = "VeryLazy",
+    event = "BufReadPre",
     config = function()
       require("gitblame").setup({
         --Note how the `gitblame_` prefix is omitted in `setup`
@@ -11,6 +11,7 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
+    event = "BufReadPre",
     config = function()
       require("gitsigns").setup({
         signcolumn = true,

@@ -4,7 +4,7 @@ local git_blame = require("gitblame")
 return {
   {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
+    event = "BufReadPre",
     config = function()
       require("lualine").setup({
         sections = {
