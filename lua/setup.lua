@@ -10,7 +10,7 @@ vim.cmd("set autoindent")
 vim.cmd("set ignorecase")
 vim.cmd("set smartcase")
 
-vim.cmd("set cursorline")
+-- vim.cmd("set cursorline")
 
 vim.cmd("set termguicolors")
 vim.cmd("set background=dark")
