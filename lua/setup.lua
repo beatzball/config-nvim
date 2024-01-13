@@ -10,12 +10,11 @@ vim.cmd("set autoindent")
 vim.cmd("set ignorecase")
 vim.cmd("set smartcase")
 
--- vim.cmd("set cursorline")
-
 vim.cmd("set termguicolors")
 vim.cmd("set background=dark")
 vim.cmd("set signcolumn=yes")
 
+-- vim.cmd("set cursorline")
 -- vim.cmd("set backspace=indent,eol,start")
 
 -- Make sure to set `mapleader` before lazy so your mappings are correct
